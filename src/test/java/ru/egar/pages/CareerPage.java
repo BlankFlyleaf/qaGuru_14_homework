@@ -2,7 +2,7 @@ package ru.egar.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import ru.egar.pages.component.OpticalAndTooltipHoverComponent;
+import ru.egar.pages.component.OpticalHoverComponent;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
@@ -10,25 +10,25 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class CareerPage {
 
-    private SelenideElement feedBackButton = $(".t228__right_buttons");
-    private SelenideElement modlDialog = $(".t702__wrapper");
-    private SelenideElement modalTitle = $("#popuptitle_783271288");
-    private SelenideElement emailHeader = $("#field-title_1629901744875");
-    private SelenideElement emailInput = $("#input_1629901744875");
-    private SelenideElement phoneHeader = $("#field-title_1629901767207");
-    private SelenideElement phoneInput = $("#input_1629901767207");
-    private SelenideElement nameHeader = $("#field-title_1495810354468");
-    private SelenideElement nameInput = $("#input_1495810354468");
-    private SelenideElement companyHeader = $("#field-title_1630012770354");
-    private SelenideElement companyInput = $("#input_1630012770354");
-    private SelenideElement jobhHeader = $("#field-title_1630012788697");
-    private SelenideElement jobhInput = $("#input_1630012788697");
-    private SelenideElement commentHeader = $("#field-title_1629901868249");
-    private SelenideElement commentInput = $("#input_1629901868249");
-    private SelenideElement checkboxHeader = $(".t-checkbox__control span");
-    private SelenideElement checkboxInput = $("[data-input-lid='1679027361388']");
-    private SelenideElement submitButtonHeader = $(".t-submit span");
-    private SelenideElement submitButton = $(".t-submit span");
+    private final SelenideElement feedBackButton = $(".t228__right_buttons");
+    private final SelenideElement modlDialog = $(".t702__wrapper");
+    private final SelenideElement modalTitle = $("#popuptitle_783271288");
+    private final SelenideElement emailHeader = $("#field-title_1629901744875");
+    private final SelenideElement emailInput = $("#input_1629901744875");
+    private final SelenideElement phoneHeader = $("#field-title_1629901767207");
+    private final SelenideElement phoneInput = $("#input_1629901767207");
+    private final SelenideElement nameHeader = $("#field-title_1495810354468");
+    private final SelenideElement nameInput = $("#input_1495810354468");
+    private final SelenideElement companyHeader = $("#field-title_1630012770354");
+    private final SelenideElement companyInput = $("#input_1630012770354");
+    private final SelenideElement jobhHeader = $("#field-title_1630012788697");
+    private final SelenideElement jobhInput = $("#input_1630012788697");
+    private final SelenideElement commentHeader = $("#field-title_1629901868249");
+    private final SelenideElement commentInput = $("#input_1629901868249");
+    private final SelenideElement checkboxHeader = $(".t-checkbox__control span");
+    private final SelenideElement checkboxInput = $("[data-input-lid='1679027361388']");
+    private final SelenideElement submitButtonHeader = $(".t-submit span");
+    private final SelenideElement submitButton = $(".t-submit span");
 
     @Step("Открываем страницу Карьера")
     public CareerPage openCareer() {
@@ -39,7 +39,7 @@ public class CareerPage {
 
     @Step("Проверка оптического ховера - {title}")
     public CareerPage checkHover (String titleId, String title, String resultId, String result) {
-        OpticalAndTooltipHoverComponent opticalHover = new OpticalAndTooltipHoverComponent();
+        OpticalHoverComponent opticalHover = new OpticalHoverComponent();
 
         opticalHover.checkTitleOfHover(titleId, title);
         opticalHover.triggerHover(titleId);

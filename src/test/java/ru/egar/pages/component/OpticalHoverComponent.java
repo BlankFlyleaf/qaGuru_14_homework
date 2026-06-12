@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Condition.cssValue;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
-public class OpticalAndTooltipHoverComponent {
+public class OpticalHoverComponent {
     private SelenideElement titleOfHover(String titleId)  {
         return $("[field='tn_text_" + titleId + "']");
     }
