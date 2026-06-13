@@ -30,10 +30,14 @@ public class Attach {
     }
 
     public static void browserConsoleLogs() {
-        attachAsText(
-                "Browser console logs",
-                String.join("\n", Selenide.getWebDriverLogs(BROWSER))
-        );
+        try {
+            attachAsText(
+                    "Browser console logs",
+                    String.join("\n", Selenide.getWebDriverLogs(BROWSER))
+            );
+        } catch (Exception e) {
+            attachAsText("Browser console logs", "Not available for this browser");
+        }
     }
 
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
