@@ -27,7 +27,7 @@ public class OpticalHoverComponent {
     }
 
     public void triggerHover(String titleId) {
-        triggerOfHover(titleId).hover();
+        triggerOfHover(titleId).scrollTo().hover();
     }
 
 }
