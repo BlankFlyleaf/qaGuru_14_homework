@@ -2,6 +2,7 @@ package ru.egar.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
+import ru.egar.pages.component.ModalDialogValidationComponent;
 import ru.egar.pages.component.OpticalHoverComponent;
 
 import static com.codeborne.selenide.Condition.*;
@@ -9,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class CareerPage {
-
+    private final SelenideElement pageHeader = $("[field='tn_text_1727343591601']");
     private final SelenideElement feedBackButton = $(".t228__right_buttons");
     private final SelenideElement modlDialog = $(".t702__wrapper");
     private final SelenideElement modalTitle = $("#popuptitle_783271288");
@@ -28,11 +29,14 @@ public class CareerPage {
     private final SelenideElement checkboxHeader = $(".t-checkbox__control span");
     private final SelenideElement checkboxInput = $("[data-input-lid='1679027361388']");
     private final SelenideElement submitButtonHeader = $(".t-submit span");
-    private final SelenideElement submitButton = $(".t-submit span");
+    private final SelenideElement submitCheckButton = $(".t-submit span");
+    private final SelenideElement submitClickButton = $(".t-submit");
 
-    @Step("Открываем страницу Карьера")
+    @Step("Открываем страницу 'Карьера'")
     public CareerPage openCareer() {
         open("/career");
+        pageHeader
+                .shouldHave(text("Карьера в EGAR"));
 
         return this;
     }
@@ -136,9 +140,51 @@ public class CareerPage {
     @Step("Проверка кнопки Submit")
     public CareerPage checkSubmitButton() {
         submitButtonHeader.shouldHave(text("Отправить"));
-        submitButton
+        submitCheckButton
                 .shouldBe(enabled)
                 .shouldBe(clickable);
+
+        return this;
+    }
+
+    @Step("Нажимаем кнопку Submit")
+    public CareerPage clickSubmitButton() {
+        submitClickButton
+                .scrollTo()
+                .click();
+
+        return this;
+    }
+
+    @Step("Проверяем, что валидация параметров не активна")
+    public CareerPage checkValidationNotActive() {
+        ModalDialogValidationComponent modalDialogValidationComponent = new ModalDialogValidationComponent();
+
+        modalDialogValidationComponent
+                .checkEmailErrorNotVisible()
+                .checkPhoneErrorNotVisible()
+                .checkNameErrorNotVisible()
+                .checkCompanyErrorNotVisible()
+                .checkJobErrorNotVisible()
+                .checkCommentErrorNotVisible()
+                .checkCheckboxErrorNotVisible();
+
+        return this;
+    }
+
+    @Step("Проверяем, что валидация параметров активна")
+    public CareerPage checkValidationActive() {
+        ModalDialogValidationComponent modalDialogValidationComponent = new ModalDialogValidationComponent();
+
+        modalDialogValidationComponent
+                .checkDialogErrorAppear()
+                .checkEmailErrorVisible()
+                .checkPhoneErrorVisible()
+                .checkNameErrorVisible()
+                .checkCompanyErrorVisible()
+                .checkJobErrorVisible()
+                .checkCommentErrorNotVisible()
+                .checkCheckboxErrorVisible();
 
         return this;
     }

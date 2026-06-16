@@ -8,7 +8,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import ru.egar.helpers.Attach;
+import ru.egar.pages.AboutPage;
 import ru.egar.pages.CareerPage;
+import ru.egar.pages.SmartMonitoringPage;
 
 import java.util.Map;
 
@@ -16,6 +18,8 @@ import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
 public class TestBase {
     CareerPage careerPage = new CareerPage();
+    AboutPage aboutPage = new AboutPage();
+    SmartMonitoringPage smartMonitoringPage = new SmartMonitoringPage();
 
     @BeforeAll
     static void testConfig() {

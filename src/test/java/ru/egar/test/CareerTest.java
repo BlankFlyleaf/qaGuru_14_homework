@@ -16,10 +16,10 @@ public class CareerTest extends TestBase {
     @Test
     @Tag("Smoke")
     @Tag("Regression")
-    @Story("Проверка кейсов на странице Карьеры")
-    @Owner("AСhurilov")
+    @Story("Проверка кейсов на странице 'Карьеры'")
+    @Owner("AChurilov")
     @Severity(SeverityLevel.BLOCKER)
-    @DisplayName("Проверяем открытия модальной формы 'Связаться с нами'")
+    @DisplayName("Проверяем открытие модальной формы 'Связаться с нами'")
     public void modalDialogTest(){
         careerPage
                 .openCareer()
@@ -36,17 +36,36 @@ public class CareerTest extends TestBase {
                 .checkSubmitButton();
     }
 
+    @Test
+    @Tag("Smoke")
+    @Tag("Regression")
+    @Story("Проверка кейсов на странице 'Карьеры'")
+    @Owner("AChurilov")
+    @Severity(SeverityLevel.CRITICAL)
+    @DisplayName("Проверяем появление валидации модальной формы 'Связаться с нами'")
+    public void modalDialogValidationTest(){
+        careerPage
+                .openCareer()
+                .clickFeedbackButton()
+                .checkValidationNotActive()
+                .clickSubmitButton()
+                .checkValidationActive();
+    }
+
     @EnumSource(OpticalHoverData.class)
     @ParameterizedTest
     @Tag("Regression")
-    @Story("Проверка кейсов на странице Карьеры")
-    @Owner("AСhurilov")
+    @Story("Проверка кейсов на странице 'Карьеры'")
+    @Owner("AChurilov")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверяем заполнение ховеров с заменой заголовка на описание")
     public void hoverOpticalTest(OpticalHoverData opticalHoverData) {
         careerPage
                 .openCareer()
-                .checkHover(opticalHoverData.titleId, opticalHoverData.title, opticalHoverData.resultId, opticalHoverData.result);
+                .checkHover(
+                        opticalHoverData.titleId,
+                        opticalHoverData.title,
+                        opticalHoverData.resultId,
+                        opticalHoverData.result);
     }
 }
-
