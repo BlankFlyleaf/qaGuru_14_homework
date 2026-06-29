@@ -22,5 +22,4 @@ public class PdfHelper {
     public void checkPdfContainsText (String value, String text) throws Exception {
         assertThat(getPdf(value)).containsText(text);
     }
-
 }

@@ -21,6 +21,7 @@ public class SmartMonitoringPage {
         return this;
     }
 
+    @Step("Раскрываем аккордеон - {title}")
     public SmartMonitoringPage triggerAccordion(String title) {
         triggerOfAccordion
                 .findBy(text(title))
@@ -29,17 +30,19 @@ public class SmartMonitoringPage {
         return this;
     }
 
+    @Step("Проверяем автора PDF - {author}")
     public SmartMonitoringPage checkPdfAuthor (String value, String author) throws Exception {
         PdfHelper pdfHelper = new PdfHelper();
         pdfHelper.checkPdfAuthor(value, author);
 
         return this;
     }
+
+    @Step("Проверяем, что в PDF есть искомый текст - {text}")
     public SmartMonitoringPage checkPdfContainsText (String value, String text) throws Exception {
         PdfHelper pdfHelper = new PdfHelper();
         pdfHelper.checkPdfContainsText(value, text);
 
         return this;
     }
-
 }
