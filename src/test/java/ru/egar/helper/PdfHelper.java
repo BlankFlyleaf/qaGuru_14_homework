@@ -2,8 +2,6 @@ package ru.egar.helper;
 
 import com.codeborne.pdftest.PDF;
 
-import java.time.Duration;
-
 import static com.codeborne.pdftest.assertj.Assertions.assertThat;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -12,7 +10,7 @@ public class PdfHelper {
 
     private PDF getPdf(String value) throws Exception {
         if (pdf == null) {
-            pdf = new PDF($("[href='https://file.egar.ru/" + value + ".pdf']").download(30_000));
+            pdf = new PDF($("[href='https://file.egar.ru/" + value + ".pdf']").download());
         }
         return pdf;
     }

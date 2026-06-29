@@ -35,7 +35,7 @@ public class SmartMonitoringTest extends TestBase {
         smartMonitoringPage
                 .openSmartMonitoring()
                 .triggerAccordion("Установка")
-                .checkPdfAuthor("Инструкция_по_установке_и_эксплуатации_ПО_СБМ", "Руслан Пронин")
+                .checkPdfAuthor("test", "Руслан Пронин")
                 .checkPdfContainsText("Инструкция_по_установке_и_эксплуатации_ПО_СБМ","Описание проверочного экземпляра программного обеспечения «СМАРТ БИЗНЕС-МОНИТОРИНГ- СБМ»");
     }
 
