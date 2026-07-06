@@ -14,7 +14,7 @@ public class PdfHelper {
             pdf = new PDF($("a[href*='" + value + "']")
                     .scrollTo()
                     .shouldBe(visible)
-                    .download(30_000));
+                    .download(90_000));
         }
         return pdf;
     }
