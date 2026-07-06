@@ -80,28 +80,58 @@
 
 ## Allure отчёт
 
-_[ скриншот ]_
+### *Основная страница отчёта*
+
+<p align="center">  
+<img title="Allure Overview Dashboard" src="src/test/resources/Screenshot/allureReport1.png" width="850">  
+</p>  
+
+### *Тест-кейсы*
+
+<p align="center">  
+<img title="Allure Tests" src="src/test/resources/Screenshot/allureReport2.png" width="850">  
+</p>
+
+### *Графики*
+
+<p align="center">  
+<img title="Allure Tests" src="src/test/resources/Screenshot/allureReport3.png" width="850">  
+</p>
 
 ---
 
 ## Allure TestOps
 
-_[ скриншот ]_
+### *Основная страница*
+<p align="center">  
+<img title="Allure TestOps main" src="src/test/resources/Screenshot/TestOps.png" width="850">  
+</p>
+
+### *Страница кейсов*
+<p align="center">  
+<img title="Allure TestOps Tests" src="src/test/resources/Screenshot/TestOps2.png" width="850">  
+</p>
 
 ---
 
 ## Интеграция с Jira
 
-_[ скриншот ]_
+<p align="center">  
+<img title="Jira Task" src="src/test/resources/Screenshot/jira.png" width="850">  
+</p>
+
 
 ---
 
 ## Уведомления в Telegram
 
-_[ скриншот ]_
+<p align="center">  
+<img title="Telegram Integration" src="src/test/resources/Screenshot/telegram.png" width="850">  
+</p>
 
 ---
 
 ## Видео прохождения теста
-
-_[ видео/гиф ]_
+<p align="center">
+<img title="Selenoid Video" src="src/test/resources/Video/modalWindowValidation.gif" width="550" height="350"  alt="video">   
+</p>
