@@ -26,7 +26,6 @@ public class TestBase {
         Configuration.pageLoadStrategy = System.getProperty("PAGE_LOAD_STRATEGY", "eager");
         Configuration.baseUrl = System.getProperty("BASE_URL", "https://egar.ru");
 
-
         String selenoidUrl = System.getProperty("SELENOID_URL");
 
         if (selenoidUrl != null && !selenoidUrl.isBlank()) {

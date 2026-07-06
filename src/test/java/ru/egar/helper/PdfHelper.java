@@ -3,6 +3,7 @@ package ru.egar.helper;
 import com.codeborne.pdftest.PDF;
 
 import static com.codeborne.pdftest.assertj.Assertions.assertThat;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class PdfHelper {
@@ -10,7 +11,10 @@ public class PdfHelper {
 
     private PDF getPdf(String value) throws Exception {
         if (pdf == null) {
-            pdf = new PDF($("a[href*='" + value + "']").download(30_000));
+            pdf = new PDF($("a[href*='" + value + "']")
+                    .scrollTo()
+                    .shouldBe(visible)
+                    .download(30_000));
         }
         return pdf;
     }

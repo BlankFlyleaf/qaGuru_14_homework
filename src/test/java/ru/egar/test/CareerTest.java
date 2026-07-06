@@ -11,10 +11,11 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import ru.egar.data.OpticalHoverData;
 
+@Tag("Regression")
+@Story("Проверка кейсов на странице 'Карьеры'")
+@Owner("AChurilov")
 public class CareerTest extends TestBase {
-    @Tag("Regression")
-    @Story("Проверка кейсов на странице 'Карьеры'")
-    @Owner("AChurilov")
+
 
     @Test
     @Tag("Smoke")

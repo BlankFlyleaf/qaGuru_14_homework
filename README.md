@@ -83,19 +83,19 @@
 ### *Основная страница отчёта*
 
 <div align="center">  
-<img title="Allure Overview Dashboard" src="src/test/java/ru/egar/media/screenshot/allureReport1.png" width="850" alt="Allure Overview Dashboard">  
+<img title="Allure Overview Dashboard" src="media/screenshot/allureReport1.png" width="850" alt="Allure Overview Dashboard">  
 </div>  
 
 ### *Тест-кейсы*
 
 <div align="center">  
-<img title="Allure Tests" src="src/test/java/ru/egar/media/screenshot/allureReport2.png" width="850" alt="Allure Test">  
+<img title="Allure Tests" src="media/screenshot/allureReport2.png" width="850" alt="Allure Test">  
 </div>
 
 ### *Графики*
 
 <div align="center">  
-<img title="Allure Graphs" src="src/test/java/ru/egar/media/screenshot/allureReport3.png" width="850" alt="Allure Graphs">  
+<img title="Allure Graphs" src="media/screenshot/allureReport3.png" width="850" alt="Allure Graphs">  
 </div>
 
 ---
@@ -104,12 +104,12 @@
 
 ### *Основная страница*
 <p align="center">  
-<img title="Allure TestOps main" src="src/test/java/ru/egar/media/screenshot/TestOps.png" width="850" alt="Allure TestOps main">  
+<img title="Allure TestOps main" src="media/screenshot/TestOps.png" width="850" alt="Allure TestOps main">  
 </p>
 
 ### *Страница кейсов*
 <div align="center">  
-<img title="Allure TestOps Tests" src="src/test/java/ru/egar/media/screenshot/TestOps2.png" width="850" alt="Allure TestOps Tests">  
+<img title="Allure TestOps Tests" src="media/screenshot/TestOps2.png" width="850" alt="Allure TestOps Tests">  
 </div>
 
 ---
@@ -117,7 +117,7 @@
 ## Интеграция с Jira
 
 <div align="center">  
-<img title="Jira Task" src="src/test/java/ru/egar/media/screenshot/jira.png" width="850" alt="Jira Task">  
+<img title="Jira Task" src="media/screenshot/jira.png" width="850" alt="Jira Task">  
 </div>
 
 
@@ -126,12 +126,12 @@
 ## Уведомления в Telegram
 
 <div align="center">  
-<img title="Telegram Integration" src="src/test/java/ru/egar/media/screenshot/telegram.png" width="850" alt="Telegram Integration">  
+<img title="Telegram Integration" src="media/screenshot/telegram.png" width="850" alt="Telegram Integration">  
 </div>
 
 ---
 
 ## Видео прохождения теста
 <div align="center">
-<img title="Selenoid Video" src="src/test/java/ru/egar/media/video/modalWindowValidation.gif" width="550" height="350"  alt="Selenoid Video">   
+<img title="Selenoid Video" src="media/video/modalWindowValidation.gif" width="550" height="350"  alt="Selenoid Video">   
 </div>

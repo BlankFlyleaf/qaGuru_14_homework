@@ -8,10 +8,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+@Tag("Regression")
+@Story("Проверка кейсов на странице 'О компании'")
+@Owner("AChurilov")
 public class AboutTest extends TestBase {
-    @Tag("Regression")
-    @Story("Проверка кейсов на странице 'О компании'")
-    @Owner("AChurilov")
+
 
     @Test
     @Severity(SeverityLevel.NORMAL)
