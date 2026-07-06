@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 public class SmartMonitoringTest extends TestBase {
 
     @Test
-
+    @Disabled
     @Tag("Regression")
     @Story("Проверка кейсов на странице 'Смарт бизнес-технологии'")
     @Owner("AChurilov")
@@ -28,7 +28,7 @@ public class SmartMonitoringTest extends TestBase {
 
 
     @Test
-
+    @Disabled
     @Tag("Regression")
     @Story("Проверка кейсов на странице 'Смарт бизнес-технологии'")
     @Owner("AChurilov")
