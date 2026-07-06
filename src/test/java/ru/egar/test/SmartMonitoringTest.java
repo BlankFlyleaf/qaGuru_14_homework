@@ -12,12 +12,12 @@ import org.junit.jupiter.api.Test;
 public class SmartMonitoringTest extends TestBase {
 
     @Test
+    @Disabled
     @Tag("Regression")
     @Story("Проверка кейсов на странице 'Смарт бизнес-технологии'")
     @Owner("AChurilov")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверяем PDF файл в аккордеоне 'Функциональные характеристики'")
-    @Disabled
     public void pdfTest () throws Exception {
         smartMonitoringPage
                 .openSmartMonitoring()
@@ -28,12 +28,12 @@ public class SmartMonitoringTest extends TestBase {
 
 
     @Test
+    @Disabled
     @Tag("Regression")
     @Story("Проверка кейсов на странице 'Смарт бизнес-технологии'")
     @Owner("AChurilov")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверяем первый PDF файл в аккордеоне 'Установка'")
-    @Disabled
     public void pdfInstallTest () throws Exception {
         smartMonitoringPage
                 .openSmartMonitoring()
