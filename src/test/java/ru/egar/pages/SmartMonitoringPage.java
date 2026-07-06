@@ -3,7 +3,7 @@ package ru.egar.pages;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import ru.egar.helper.PdfHelper;
+import ru.egar.helpers.PdfHelper;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
