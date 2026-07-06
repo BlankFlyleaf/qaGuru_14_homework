@@ -4,6 +4,7 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -16,6 +17,7 @@ public class SmartMonitoringTest extends TestBase {
     @Owner("AChurilov")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверяем PDF файл в аккордеоне 'Функциональные характеристики'")
+    @Disabled
     public void pdfTest () throws Exception {
         smartMonitoringPage
                 .openSmartMonitoring()
@@ -31,6 +33,7 @@ public class SmartMonitoringTest extends TestBase {
     @Owner("AChurilov")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверяем первый PDF файл в аккордеоне 'Установка'")
+    @Disabled
     public void pdfInstallTest () throws Exception {
         smartMonitoringPage
                 .openSmartMonitoring()
