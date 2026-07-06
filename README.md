@@ -18,12 +18,12 @@
 
 ## Технологии и инструменты
 
-![Java](https://img.shields.io/badge/Java-17-orange)
-![Gradle](https://img.shields.io/badge/Gradle-8-blue)
-![JUnit5](https://img.shields.io/badge/JUnit-5-green)
-![Selenide](https://img.shields.io/badge/Selenide-7.16.2-blue)
-![Selenoid](https://img.shields.io/badge/Selenoid-remote-lightgrey)
-![Allure](https://img.shields.io/badge/Allure-2.34.0-orange)
+[![Java](https://img.shields.io/badge/Java-17-orange)](https://www.java.com)
+[![Gradle](https://img.shields.io/badge/Gradle-8-blue)](https://gradle.org)
+[![JUnit5](https://img.shields.io/badge/JUnit-5-green)](https://junit.org/junit5/)
+[![Selenide](https://img.shields.io/badge/Selenide-7.16.2-blue)](https://selenide.org)
+[![Selenoid](https://img.shields.io/badge/Selenoid-remote-lightgrey)](https://aerokube.com/selenoid/)
+[![Allure](https://img.shields.io/badge/Allure-2.34.0-orange)](https://allurereport.org)
 
 ---
 
@@ -60,7 +60,7 @@
 | `BROWSER` | Браузер | `chrome` |
 | `BROWSER_VERSION` | Версия браузера | — |
 | `BROWSER_SIZE` | Размер окна | `1920x1080` |
-| `BASE_URL` | Адрес сайта | — |
+| `BASE_URL` | Адрес сайта | https://egar.ru |
 | `SELENOID_URL` | Адрес Selenoid | — |
 | `SELENOID_CREDENTIAL` | Логин:пароль Selenoid | — |
 
@@ -82,21 +82,21 @@
 
 ### *Основная страница отчёта*
 
-<p align="center">  
-<img title="Allure Overview Dashboard" src="src/test/resources/Screenshot/allureReport1.png" width="850">  
-</p>  
+<div align="center">  
+<img title="Allure Overview Dashboard" src="src/test/java/ru/egar/media/screenshot/allureReport1.png" width="850" alt="Allure Overview Dashboard">  
+</div>  
 
 ### *Тест-кейсы*
 
-<p align="center">  
-<img title="Allure Tests" src="src/test/resources/Screenshot/allureReport2.png" width="850">  
-</p>
+<div align="center">  
+<img title="Allure Tests" src="src/test/java/ru/egar/media/screenshot/allureReport2.png" width="850" alt="Allure Test">  
+</div>
 
 ### *Графики*
 
-<p align="center">  
-<img title="Allure Tests" src="src/test/resources/Screenshot/allureReport3.png" width="850">  
-</p>
+<div align="center">  
+<img title="Allure Graphs" src="src/test/java/ru/egar/media/screenshot/allureReport3.png" width="850" alt="Allure Graphs">  
+</div>
 
 ---
 
@@ -104,34 +104,34 @@
 
 ### *Основная страница*
 <p align="center">  
-<img title="Allure TestOps main" src="src/test/resources/Screenshot/TestOps.png" width="850">  
+<img title="Allure TestOps main" src="src/test/java/ru/egar/media/screenshot/TestOps.png" width="850" alt="Allure TestOps main">  
 </p>
 
 ### *Страница кейсов*
-<p align="center">  
-<img title="Allure TestOps Tests" src="src/test/resources/Screenshot/TestOps2.png" width="850">  
-</p>
+<div align="center">  
+<img title="Allure TestOps Tests" src="src/test/java/ru/egar/media/screenshot/TestOps2.png" width="850" alt="Allure TestOps Tests">  
+</div>
 
 ---
 
 ## Интеграция с Jira
 
-<p align="center">  
-<img title="Jira Task" src="src/test/resources/Screenshot/jira.png" width="850">  
-</p>
+<div align="center">  
+<img title="Jira Task" src="src/test/java/ru/egar/media/screenshot/jira.png" width="850" alt="Jira Task">  
+</div>
 
 
 ---
 
 ## Уведомления в Telegram
 
-<p align="center">  
-<img title="Telegram Integration" src="src/test/resources/Screenshot/telegram.png" width="850">  
-</p>
+<div align="center">  
+<img title="Telegram Integration" src="src/test/java/ru/egar/media/screenshot/telegram.png" width="850" alt="Telegram Integration">  
+</div>
 
 ---
 
 ## Видео прохождения теста
-<p align="center">
-<img title="Selenoid Video" src="src/test/resources/Video/modalWindowValidation.gif" width="550" height="350"  alt="video">   
-</p>
+<div align="center">
+<img title="Selenoid Video" src="src/test/java/ru/egar/media/video/modalWindowValidation.gif" width="550" height="350"  alt="Selenoid Video">   
+</div>

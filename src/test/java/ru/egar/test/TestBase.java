@@ -14,8 +14,6 @@ import ru.egar.pages.SmartMonitoringPage;
 
 import java.util.Map;
 
-import static com.codeborne.selenide.logevents.SelenideLogger.step;
-
 public class TestBase {
     CareerPage careerPage = new CareerPage();
     AboutPage aboutPage = new AboutPage();
@@ -23,29 +21,24 @@ public class TestBase {
 
     @BeforeAll
     static void testConfig() {
-        String browser = System.getProperty("BROWSER", "chrome");
-        String browserVersion = System.getProperty("BROWSER_VERSION");
-        String pageLoadStrategy = System.getProperty("PAGE_LOAD_STRATEGY", "eager");
-        String browserSize = System.getProperty("BROWSER_SIZE", "1920x1080");
-        String selenoidCredential = System.getProperty("SELENOID_CREDENTIAL");
+        Configuration.browser = System.getProperty("BROWSER", "chrome");
+        Configuration.browserSize = System.getProperty("BROWSER_SIZE", "1920x1080");
+        Configuration.pageLoadStrategy = System.getProperty("PAGE_LOAD_STRATEGY", "eager");
+        Configuration.baseUrl = System.getProperty("BASE_URL", "https://egar.ru");
+
+
         String selenoidUrl = System.getProperty("SELENOID_URL");
-        String baseUrl = System.getProperty("BASE_URL");
 
-        step("Задаем настройки для автотестов", () ->{
-            Configuration.browser = browser;
-            Configuration.browserVersion = browserVersion;
-            Configuration.browserSize = browserSize;
-            Configuration.pageLoadStrategy = pageLoadStrategy;
-            Configuration.baseUrl = baseUrl;
-            Configuration.remote = ("https://" + selenoidCredential + "@" + selenoidUrl);
-
+        if (selenoidUrl != null && !selenoidUrl.isBlank()) {
+            Configuration.browserVersion = System.getProperty("BROWSER_VERSION");
+            Configuration.remote = ("https://" + System.getProperty("SELENOID_CREDENTIAL") + "@" + System.getProperty("SELENOID_URL"));
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                     "enableVNC", true,
                     "enableVideo", true
             ));
             Configuration.browserCapabilities = capabilities;
-        });
+        }
     }
 
     @BeforeAll
@@ -55,12 +48,12 @@ public class TestBase {
 
     @AfterEach
     void tearDown() {
-        step("Добавляем аттачи", () ->{
             Attach.screenshotAs("Last screenshot");
             Attach.pageSource();
             Attach.browserConsoleLogs();
+        if (System.getProperty("SELENOID_URL") != null) {
             Attach.addVideo();
-        });
-        step("Завершаем тест", Selenide::closeWebDriver);
+        }
+            Selenide.closeWebDriver();
     }
 }

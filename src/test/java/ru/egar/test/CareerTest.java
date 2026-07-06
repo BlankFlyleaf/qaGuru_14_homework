@@ -12,12 +12,12 @@ import org.junit.jupiter.params.provider.EnumSource;
 import ru.egar.data.OpticalHoverData;
 
 public class CareerTest extends TestBase {
-
-    @Test
-    @Tag("Smoke")
     @Tag("Regression")
     @Story("Проверка кейсов на странице 'Карьеры'")
     @Owner("AChurilov")
+
+    @Test
+    @Tag("Smoke")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверяем открытие модальной формы 'Связаться с нами'")
     public void modalDialogTest(){
@@ -38,9 +38,6 @@ public class CareerTest extends TestBase {
 
     @Test
     @Tag("Smoke")
-    @Tag("Regression")
-    @Story("Проверка кейсов на странице 'Карьеры'")
-    @Owner("AChurilov")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверяем появление валидации модальной формы 'Связаться с нами'")
     public void modalDialogValidationTest(){
@@ -54,9 +51,6 @@ public class CareerTest extends TestBase {
 
     @EnumSource(OpticalHoverData.class)
     @ParameterizedTest
-    @Tag("Regression")
-    @Story("Проверка кейсов на странице 'Карьеры'")
-    @Owner("AChurilov")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверяем заполнение ховеров с заменой заголовка на описание")
     public void hoverOpticalTest(OpticalHoverData opticalHoverData) {
