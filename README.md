@@ -81,7 +81,7 @@
 
 ---
 
-## Allure отчёт
+## [Allure отчет](https://jenkins.autotests.cloud/view/blankFlyleaf_jobs/job/C41-blankflyleaf-unit14/allure/)
 
 ### *Основная страница отчёта*
 
@@ -103,7 +103,7 @@
 
 ---
 
-## Allure TestOps
+## [Allure TestOps](https://allure.autotests.cloud/project/5104/dashboards)
 
 ### *Основная страница*
 <p align="center">  
@@ -117,7 +117,7 @@
 
 ---
 
-## Интеграция с Jira
+## [Интеграция с Jira](https://jira.autotests.cloud/browse/HOMEWORK-1622)
 
 <div align="center">  
 <img title="Jira Task" src="media/screenshot/jira.png" width="850" alt="Jira Task">  
