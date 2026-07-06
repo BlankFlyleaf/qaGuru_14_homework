@@ -10,7 +10,7 @@ public class PdfHelper {
 
     private PDF getPdf(String value) throws Exception {
         if (pdf == null) {
-            pdf = new PDF($("a[href*='" + value + "']").download());
+            pdf = new PDF($("a[href*='" + value + "']").download(30_000));
         }
         return pdf;
     }
