@@ -14,7 +14,7 @@ public class PdfHelper {
     private PDF getPdf(String value) throws Exception {
         if (pdf == null) {
             String encoded = URLEncoder.encode(value, StandardCharsets.UTF_8);
-            pdf = new PDF($("['href='https://file.egar.ru/" + encoded + ".pdf']").download());
+            pdf = new PDF($("[href='https://file.egar.ru/" + encoded + ".pdf']").download());
         }
         return pdf;
     }
