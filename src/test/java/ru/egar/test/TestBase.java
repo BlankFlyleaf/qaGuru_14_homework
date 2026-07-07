@@ -1,6 +1,7 @@
 package ru.egar.test;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.FileDownloadMode;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -25,6 +26,7 @@ public class TestBase {
         Configuration.browserSize = System.getProperty("BROWSER_SIZE", "1920x1080");
         Configuration.pageLoadStrategy = System.getProperty("PAGE_LOAD_STRATEGY", "eager");
         Configuration.baseUrl = System.getProperty("BASE_URL", "https://egar.ru");
+        Configuration.fileDownload = FileDownloadMode.FOLDER;
 
         String selenoidUrl = System.getProperty("SELENOID_URL");
 

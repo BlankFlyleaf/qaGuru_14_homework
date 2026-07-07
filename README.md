@@ -103,7 +103,7 @@
 
 ---
 
-## [Allure TestOps](https://allure.autotests.cloud/project/5104/dashboards)
+## [Allure TestOps](https://allure.autotests.cloud/project/5268/dashboards)
 
 ### *Основная страница*
 <p align="center">  
