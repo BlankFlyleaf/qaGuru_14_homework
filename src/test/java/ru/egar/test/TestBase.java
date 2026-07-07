@@ -32,8 +32,6 @@ public class TestBase {
         String selenoidUrl = System.getProperty("SELENOID_URL");
 
         if (selenoidUrl != null && !selenoidUrl.isBlank()) {
-            Configuration.fileDownload = FileDownloadMode.FOLDER;
-            Configuration.downloadsFolder = "build/downloads";
             Configuration.browserVersion = System.getProperty("BROWSER_VERSION");
             Configuration.remote = ("https://" + System.getProperty("SELENOID_CREDENTIAL") + "@" + System.getProperty("SELENOID_URL"));
             DesiredCapabilities capabilities = new DesiredCapabilities();
