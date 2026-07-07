@@ -12,7 +12,6 @@ import org.junit.jupiter.api.Test;
 @Tag("Regression")
 @Story("Проверка кейсов на странице 'Смарт бизнес-технологии'")
 @Owner("AChurilov")
-@Disabled
 public class SmartMonitoringTest extends TestBase {
 
 
