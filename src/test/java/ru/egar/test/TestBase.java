@@ -27,6 +27,7 @@ public class TestBase {
         Configuration.pageLoadStrategy = System.getProperty("PAGE_LOAD_STRATEGY", "eager");
         Configuration.baseUrl = System.getProperty("BASE_URL", "https://egar.ru");
         Configuration.fileDownload = FileDownloadMode.FOLDER;
+        Configuration.downloadsFolder = "build/downloads";
 
         String selenoidUrl = System.getProperty("SELENOID_URL");
 
