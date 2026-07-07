@@ -27,6 +27,7 @@ repositories {
 dependencies {
     testImplementation (
             "com.codeborne:selenide:7.16.2",
+            "com.codeborne:selenide-proxy:7.16.2",
             "org.junit.jupiter:junit-jupiter:6.1.0",
             'org.slf4j:slf4j-simple:2.0.18',
             'commons-io:commons-io:2.22.0',
